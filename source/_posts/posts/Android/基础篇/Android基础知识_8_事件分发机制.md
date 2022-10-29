@@ -28,7 +28,7 @@ top_img: /imagers/image-20221028201214599.png
 - 事件列：从手指接触屏幕至手指离开屏幕，这个过程产生的一系列事件
   任何事件列都是以DOWN事件开始，UP事件结束，中间有无数的MOVE事件，如下图：
 
-![](imagers/9ba5eb04.png)
+![image-20221030032354978](imagers/image-20221030032354978.png)
 
 即当一个MotionEvent 产生后，系统需要把这个事件传递给一个具体的 View 去处理, 
 
@@ -46,7 +46,7 @@ top_img: /imagers/image-20221028201214599.png
 
 - Android的UI界面是由Activity、ViewGroup、View及其派生类组合而成的
 
-![](imagers/cc2e2cce.png)
+![image-20221030032401642](imagers/image-20221030032401642.png)
 
 - View是所有UI组件的基类
 
@@ -62,7 +62,7 @@ top_img: /imagers/image-20221028201214599.png
 
 **答：dispatchTouchEvent() 、onInterceptTouchEvent()和onTouchEvent()**
 
-![](imagers/4d898641.png)
+![image-20221030032408549](imagers/image-20221030032408549.png)
 
 > 下文会对这3个方法进行详细介绍
 
@@ -84,7 +84,7 @@ top_img: /imagers/image-20221028201214599.png
 
 - 事件分发过程由dispatchTouchEvent() 、onInterceptTouchEvent()和onTouchEvent()三个方法协助完成，如下图：
 
-![](imagers/789ad3e2.png)
+![image-20221030032416808](imagers/image-20221030032416808.png)
 
 方法详细介绍
 
@@ -92,7 +92,7 @@ top_img: /imagers/image-20221028201214599.png
 
   > Android事件分发顺序：**Activity（Window） -> ViewGroup -> View**
 
-![](imagers/0c87ddb1.png)
+![image-20221030033732510](imagers/image-20221030033732510.png)
 其中：
 
 - super：调用父类方法
@@ -127,7 +127,7 @@ top_img: /imagers/image-20221028201214599.png
 - 后续事件（Move、Up）会继续分发到该View
 - 流程图如下：
 
-![](imagers/1a8c5b50.png)
+![image-20221030033740192](imagers/image-20221030033740192.png)
 
 **3. 返回false**
 
@@ -143,7 +143,7 @@ top_img: /imagers/image-20221028201214599.png
 
 - 流程图如下：
 
-![](imagers/1a8c5b50.png)
+![image-20221030033820087](imagers/image-20221030033820087.png)
 
 ### 2.2 onTouchEvent()
 
@@ -166,7 +166,7 @@ top_img: /imagers/image-20221028201214599.png
 
 - 流程图如下：
 
-![](imagers/1a8c5b50.png)
+![image-20221030033834391](imagers/image-20221030033834391.png)
 
 **2. 返回false（同默认实现：调用父类onTouchEvent()）**
 
@@ -178,7 +178,7 @@ top_img: /imagers/image-20221028201214599.png
 
 - 流程图如下：
 
-  ![](http://upload-images.jianshu.io/upload_images/944365-9ce60722ac0a9a36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  ![image-20221030033846721](imagers/image-20221030033846721.png)
 
 ### 2.3 onInterceptTouchEvent()
 
@@ -191,11 +191,11 @@ top_img: /imagers/image-20221028201214599.png
 
 返回结果
 
-![](http://upload-images.jianshu.io/upload_images/944365-6b34c1017b14104d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030033854663](imagers/image-20221030033854663.png)
 
 - 流程图如下：
 
-![](http://upload-images.jianshu.io/upload_images/944365-37be4474ef7a1741.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030033901331](imagers/image-20221030033901331.png)
 
 ### 2.4 三者关系
 
@@ -240,7 +240,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 我们将要讨论的布局层次如下：
 
-![](imagers/196cbfd5.png)
+![image-20221030033925829](imagers/image-20221030033925829.png)
 - 最外层：Activiy A，包含两个子View：ViewGroup B、View C
 - 中间层：ViewGroup B，包含一个子View：View C
 - 最内层：View C
@@ -264,7 +264,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
   - 从Activity A---->ViewGroup B--->View C，从上往下调用dispatchTouchEvent()
   - 再由View C--->ViewGroup B --->Activity A，从下往上调用onTouchEvent()
 
-![](http://upload-images.jianshu.io/upload_images/944365-69229fd4a804c0f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030033932373](imagers/image-20221030033932373.png)
 
 注：虽然ViewGroup B的onInterceptTouchEvent方法对DOWN事件返回了false，后续的事件（MOVE、UP）依然会传递给它的onInterceptTouchEvent()
 
@@ -282,7 +282,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 - 因为C正在处理这个事件，那么DOWN事件将不再往上传递给B和A的onTouchEvent()；
 - 该事件列的其他事件（Move、Up）也将传递给C的onTouchEvent()
 
-![](http://upload-images.jianshu.io/upload_images/944365-26290b0d33370853.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030033938806](imagers/image-20221030033938806.png)
 
 #### 3.2.3 拦截DOWN事件
 
@@ -297,7 +297,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
   > 该事件列的其他事件（Move、Up）将不会再传递给B的onInterceptTouchEvent方法，该方法一旦返回一次true，就再也不会被调用了。
 
-![](http://upload-images.jianshu.io/upload_images/944365-d8acd35d3a50e091.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030033945038](imagers/image-20221030033945038.png)
 
 #### 3.2.4 拦截DOWN的后续事件
 
@@ -314,7 +314,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 - C再也不会收到该事件列产生的后续事件。
 
-  ![](http://upload-images.jianshu.io/upload_images/944365-edb138a07cbb990c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+  ![image-20221030033950895](imagers/image-20221030033950895.png)
 
 特别注意：
 
@@ -332,7 +332,7 @@ public boolean dispatchTouchEvent(MotionEvent ev) {
 
 - Android中事件分发顺序：**Activity（Window） -> ViewGroup -> View**，再次贴出下图：
 
-![](http://upload-images.jianshu.io/upload_images/944365-aa8416fc6d2e5ecd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034615804](imagers/image-20221030034615804.png)
 
 其中：
 
@@ -488,16 +488,16 @@ public boolean superDispatchTouchEvent(MotionEvent event) {
 
 **布局如下：**
 
-![](http://upload-images.jianshu.io/upload_images/944365-b0bf3dd7ad41b335.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034656666](imagers/image-20221030034656666.png)
 
 **结果测试：**
 只点击Button
 
-![](http://upload-images.jianshu.io/upload_images/944365-e3fd145ff5e454a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034715977](imagers/image-20221030034715977.png)
 
 再点击空白处
 
-![](http://upload-images.jianshu.io/upload_images/944365-252e4ef9f7243705.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034721939](imagers/image-20221030034721939.png)
 
 从上面的测试结果发现：
 
@@ -853,7 +853,7 @@ public void setOnClickListener(OnClickListener l) {
 
 #### 1. Demo1：在回调onTouch()里返回true
 
-![](http://upload-images.jianshu.io/upload_images/944365-6849145f3ce37ec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034743965](imagers/image-20221030034743965.png)
 
 ```java
 //设置OnTouchListener()
@@ -878,7 +878,7 @@ public void setOnClickListener(OnClickListener l) {
 
 点击Button，测试结果如下：
 
-![](http://upload-images.jianshu.io/upload_images/944365-c3e0ae42abb533a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034749772](imagers/image-20221030034749772.png)
 
 ### 2. Demo2：在回调onTouch()里返回false
 
@@ -905,7 +905,7 @@ public void setOnClickListener(OnClickListener l) {
 
 点击Button，测试结果如下：
 
-![](http://upload-images.jianshu.io/upload_images/944365-dc8fb10e301b05b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034757407](imagers/image-20221030034757407.png)
 
 **总结：onTouch()返回true就认为该事件被onTouch()消费掉，因而不会再继续向下传递，即不会执行OnClick()。**
 
@@ -953,11 +953,11 @@ public void setOnClickListener(OnClickListener l) {
   > 黑线：ACTION_DOWN事件传递方向
   > 红线：ACTION_MOVE和ACTION_UP事件传递方向
 
-![](http://upload-images.jianshu.io/upload_images/944365-93d0b1496e9e6ca4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034809455](imagers/image-20221030034809455.png)
 
 - 如果在某个对象（Activity、ViewGroup、View）的onTouchEvent()消费事件（返回true），那么ACTION_MOVE和ACTION_UP的事件从上往下传到这个View后就不再往下传递了，而直接传给自己的onTouchEvent()并结束本次事件传递过程。
 
   > 黑线：ACTION_DOWN事件传递方向
   > 红线：ACTION_MOVE和ACTION_UP事件传递方向
 
-![img](http://upload-images.jianshu.io/upload_images/944365-9d639a0b9ebf7b4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image-20221030034815489](imagers/image-20221030034815489.png)

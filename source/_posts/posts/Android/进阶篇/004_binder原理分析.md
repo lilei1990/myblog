@@ -32,7 +32,7 @@ Android系统中，涉及到多进程间的通信底层都是依赖于Binder IPC
 
 从进程角度来看IPC（Interprocess Communication）机制
 
-![](imagers/e5883ddb.png)
+![](imagers/e5883ddb-166707551004992.png)
 
 每个Android的进程，只能运行在自己进程所拥有的虚拟地址空间。例如，对应一个4GB的虚拟地址空间，其中3GB是用户空间，1GB是内核空间。当然内核空间的大小是可以通过参数配置调整的。对于用户空间，不同进程之间是不能共享的，而内核空间却是可共享的。Client进程向Server进程通信，恰恰是利用进程间可共享的内核内存空间来完成底层通信工作的。Client端与Server端进程往往采用ioctl等方法与内核空间的驱动进行交互。
 
@@ -40,7 +40,7 @@ Android系统中，涉及到多进程间的通信底层都是依赖于Binder IPC
 
 Binder通信采用C/S架构，从组件视角来说，包含Client、Server、ServiceManager以及Binder驱动，其中ServiceManager用于管理系统中的各种服务。架构图如下所示：
 
-![](imagers/4f2bad34.png)
+![](imagers/4f2bad34-166707551327494.png)
 
 **Binder通信的四个角色**
 
@@ -85,7 +85,7 @@ wm.addView(view, layoutParams);
 
 **使用服务的具体执行过程**
 
-![](imagers/2b9c0ed6.png)
+![](imagers/2b9c0ed6-166707551809996.png)
 
 1. Client通过获得一个Server的代理接口，对Server进行调用。
 2. 代理接口中定义的方法与Server中定义的方法是一一对应的。
@@ -111,7 +111,7 @@ AIDL的实现一共分为三部分，一部分是客户端，调用远程服务�
 **AIDL文件**
 通过如下方式新建一个AIDL文件
 
-![](imagers/ff304c0a.png)
+![](imagers/ff304c0a-166707552219598.png)
 
 **默认生成格式**
 
@@ -229,7 +229,7 @@ parcelable Book;
 
 在如下路径下：
 
-![](imagers/03f29298.png)
+![](imagers/03f29298-1667075528167100.png)
 
 其中该接口中有个重要的内部类Stub ，继承了Binder 类，同时实现了IBookManager接口。
 这个内部类是接下来的关键内容。

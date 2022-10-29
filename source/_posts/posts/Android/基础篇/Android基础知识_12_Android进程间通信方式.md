@@ -174,7 +174,7 @@ Messenger 是以串行的方式处理客户端发来的消息，如果大量消�
 - *基本数据类型*；
 - *String* 和 *CharSequence*
 
-![](imagers/870b282b.png)
+![image-20221030035632358](imagers/image-20221030035632358.png)
 - *ArrayList* ，里面的元素必须能够被 AIDL 支持；
 - *HashMap* ，里面的元素必须能够被 AIDL 支持；
 - *Parcelable* ，实现 Parcelable 接口的对象；
@@ -724,7 +724,7 @@ Socket 本身可以传输任意字节流。
 
 **Socket 是连接应用层与传输层之间接口（API）。**
 
-![](imagers/e3194021.png)
+![image-20221030035649393](imagers/image-20221030035649393.png)
 
 只实现 TCP Socket 。
 
@@ -954,8 +954,6 @@ public class TCPServerService extends Service {
 }
 ```
 
-演示：
 
-[![Markdown](http://i4.buimg.com/588795/90d3ecdb634908c1.jpg)](http://i4.buimg.com/588795/90d3ecdb634908c1.jpg)
 
 UDP Socket 可以自己尝试着实现。

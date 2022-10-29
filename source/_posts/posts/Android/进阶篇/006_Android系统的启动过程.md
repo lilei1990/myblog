@@ -30,4 +30,4 @@ top_img: /imagers/image-20221029000350349.png
 init入口函数
 init进程的入口函数为main函数，使用C++编写。位于system/core/init/init.cpp
 
-![](imagers/c8c70a5a.png)
+![](imagers/c8c70a5a-1667075544962102.png)

@@ -4,8 +4,8 @@ date: "2019-03-05"
 title: Git_Flow说明及操作规范
 tags: "Other"
 categories: "Other"
-cover: /imagers/clip_image002.gif
-top_img: /imagers/clip_image002.gif
+cover: /imagers/clip_image002-16670807777981.gif
+top_img: /imagers/clip_image002-16670807777981.gif
 ---
 
 **Git Folw** **说明及操作规范**
@@ -18,10 +18,9 @@ top_img: /imagers/clip_image002.gif
 
  
 
-|      |                                   |
-| ---- | --------------------------------- |
-|      | ![img](imagers/clip_image002.gif) |
-
+|      |                                                  |
+| ---- | ------------------------------------------------ |
+|      | ![img](imagers/clip_image002-16670807777981.gif) |
 
 在使用Git的过程中如果没有清晰流程和规划，否则,每个人都提交一堆杂乱无章的commit,项目很快就会变得难以协调和维护。
    Git版本管理同样需要一个清晰的流程和规范，Vincent Driessen 为了解决这个问题提出了 [A Successful Git Branching Model](https://links.jianshu.com/go?to=http%3A%2F%2Fnvie.com%2Fposts%2Fa-successful-git-branching-model%2F)
@@ -67,9 +66,9 @@ top_img: /imagers/clip_image002.gif
 
  
 
-|      |                                   |
-| ---- | --------------------------------- |
-|      | ![img](imagers/clip_image004.gif) |
+|      |                                                  |
+| ---- | ------------------------------------------------ |
+|      | ![img](imagers/clip_image004-16670807846113.gif) |
 
 
 
@@ -83,9 +82,9 @@ top_img: /imagers/clip_image002.gif
 
  
 
-|      |                                   |
-| ---- | --------------------------------- |
-|      | ![img](imagers/clip_image006.gif) |
+|      |                                                  |
+| ---- | ------------------------------------------------ |
+|      | ![img](imagers/clip_image006-16670807897405.gif) |
 
 
 Feature分支做完后，必须合并回Develop分支, 合并完分支后一般会删点这个Feature分支，毕竟保留下来意义也不大。
@@ -98,9 +97,9 @@ Feature分支做完后，必须合并回Develop分支, 合并完分支后一般�
 
  
 
-|      |                                   |
-| ---- | --------------------------------- |
-|      | ![img](imagers/clip_image008.gif) |
+|      |                                                  |
+| ---- | ------------------------------------------------ |
+|      | ![img](imagers/clip_image008-16670807922037.gif) |
 
 
 Release分支基于Develop分支创建，打完Release分支之后，我们可以在这个Release分支上测试，修改Bug等。同时，其它开发人员可以基于Develop分支新建Feature (记住：一旦打了Release分支之后不要从Develop分支上合并新的改动到Release分支)发布Release分支时，合并Release到Master和Develop， 同时在Master分支上打个Tag记住Release版本号，然后可以删除Release分支了。
@@ -113,9 +112,9 @@ Release分支基于Develop分支创建，打完Release分支之后，我们可�
 
  
 
-|      |                                   |
-| ---- | --------------------------------- |
-|      | ![img](imagers/clip_image010.gif) |
+|      |                                                  |
+| ---- | ------------------------------------------------ |
+|      | ![img](imagers/clip_image010-16670807953319.gif) |
 
 
 hotfix分支基于Master分支创建，开发完后需要合并回Master和Develop分支，同时在Master上打一个tag。
@@ -360,7 +359,7 @@ l 操作步骤：
 
  
 
-![img](imagers/clip_image012.gif)
+![img](imagers/clip_image012-166708080334011.gif)
 
  
 
@@ -396,7 +395,7 @@ l 操作步骤：
 
 ​     
 
-​    ![../Library/Containers/com.tencent.xinWeChat/Data/Library/Caches/com.tencent.xinWeChat/2.0b4.0.9/f31e09f16ae36c879325bb1d3f6b4bea/dragImgTmp/WeChatbc495cfdf5fba3c27dd4c6ec19e3adb9.png](imagers/clip_image014.gif)
+​    ![../Library/Containers/com.tencent.xinWeChat/Data/Library/Caches/com.tencent.xinWeChat/2.0b4.0.9/f31e09f16ae36c879325bb1d3f6b4bea/dragImgTmp/WeChatbc495cfdf5fba3c27dd4c6ec19e3adb9.png](imagers/clip_image014-166708080625313.gif)
 
  
 
@@ -406,7 +405,7 @@ l 操作步骤：
 
  
 
-​     ![WeChat46a9a8f5651900c317b86f5056ea8c4c.png](imagers/clip_image016.gif)
+​     ![WeChat46a9a8f5651900c317b86f5056ea8c4c.png](imagers/clip_image016-166708081954115.gif)
 
  
 
@@ -418,7 +417,7 @@ l 操作步骤：
 
  
 
-![../Library/Containers/com.tencent.xinWeChat/Data/Library/Caches/com.tencent.xinWeChat/2.0b4.0.9/f31e09f16ae36c879325bb1d3f6b4bea/dragImgTmp/WeChat1edc1282efd8114d75c8dbd034b400c2.png](imagers/clip_image018.gif)
+![](imagers/clip_image018-166708083833617.gif)
 
 **5.2** **Release****相关**
 
@@ -438,7 +437,7 @@ l 操作步骤
 
  
 
-​    ![WeChat5c7e048f831f33ba0c9b2a3d083f5d49.png](imagers/clip_image020.gif)
+​    ![WeChat5c7e048f831f33ba0c9b2a3d083f5d49.png](imagers/clip_image020-166708086158819.gif)
 
  
 

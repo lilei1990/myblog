@@ -28,7 +28,7 @@ top_img: /imagers/image-20221028201214599.png
 
 因为Fragment是依附于Activity存在的，因此它的生命周期收到Activity的生命周期影响
 
-![](imagers/c1aa57cb.png)
+![image-20221030025248184](imagers/image-20221030025248184.png)
 
 Fragment比Activity多了几个生命周期的回调方法
 
@@ -113,7 +113,7 @@ Activity对应的布局文件
 
 运行效果图
 
-![](imagers/7c2d3685.png)
+![image-20221030025255702](imagers/image-20221030025255702.png)
 
 **动态使用Fragment**
 
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
 
   首先来看一下这个东西：
 
-![](http://upload-images.jianshu.io/upload_images/1780352-611dd683eec287c2.gif?imageMogr2/auto-orient/strip)
+![img](imagers/strip-1667077420574162.gif)
 
 - 首先显示第一个FragmentOne页面有一个Button in FragmentOne，上面有个输入框显示的是Fragment One
 -  然后输入change，点击Button in FragmentOne，然后显示第二个Fragment，里面有一个Button in FragmentTwo，一个输入框显示Fragment Two

@@ -30,7 +30,7 @@ top_img: /imagers/image-20221029043329656.png
       - 等待Android Studio安装SDK并创建项目.
       - 记得配置环境变量flutter的sdk目录下的bin文件夹
 
-        ![flutter_info](imagers/flutter_info.png)
+        ![image-20221030054005429](imagers/image-20221030054005429.png)
 
     - **体验热重载**
       - AndroidStudio直接ctrl+s保存代码自动热更新,或者点击闪电图标
@@ -66,4 +66,4 @@ top_img: /imagers/image-20221029043329656.png
             flutter run --enable-software-rendering       
 
         或者直接配置启动参数  
-        ![image_run](imagers/image_run.png)
+        ![image-20221030054013619](imagers/image-20221030054013619.png)

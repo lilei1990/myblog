@@ -15,7 +15,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
 ## 二、 作用
 
 进程间 进行**数据交互 & 共享**，即跨进程通信
-![](imagers/dae37c8a.png)
+![image-20221030025012426](imagers/image-20221030025012426.png)
 
 ## 三、 原理
 
@@ -25,7 +25,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
 
 关于`ContentProvider`的使用主要介绍以下内容：
 
-![](imagers/edb0b94b.png)
+![image-20221030025019612](imagers/image-20221030025019612.png)
 
 ### 4.1 统一资源标识符（URI）
 
@@ -42,7 +42,7 @@ ContentProvider，即内容提供者属于Android的四大组件之一。
   > 1. 关于 系统预置`URI` 此处不作过多讲解，需要的同学可自行查看
   > 2. 此处主要讲解 自定义`URI`
 
-![](imagers/702ba87a.png)
+![image-20221030025056977](imagers/image-20221030025056977.png)
 ```Java
 // 设置URI
 Uri uri = Uri.parse("content://com.carson.provider/User/1") 
@@ -588,12 +588,12 @@ public class MainActivity extends AppCompatActivity {
 
 ### 结果
 
-![](imagers/21abe07a.png)
+![image-20221030025117340](imagers/image-20221030025117340.png)
 ### 5.2 进程间进行数据共享
 
 - 实例说明：本文需要创建2个进程，即创建两个工程，作用如下
 
-![](imagers/6b4d4c82.png)
+![image-20221030025122473](imagers/image-20221030025122473.png)
 #### 进程1
 
 使用步骤如下：
@@ -723,11 +723,11 @@ public class MainActivity extends AppCompatActivity {
 1. 运行准备数据的进程1
    在进程1中，我们准备好了一系列数据
 
-![](imagers/561c69cc.png)
+![image-20221030025132030](imagers/image-20221030025132030.png)
 2. 运行需要访问数据的进程2
    在进程2中，我们先向`ContentProvider`中插入数据，再查询数据
 
-![](imagers/843fa22b.png)
+![image-20221030025137947](imagers/image-20221030025137947.png)
 ## 六、优点
 
 ### 6.1 安全
@@ -747,9 +747,9 @@ public class MainActivity extends AppCompatActivity {
 
   > 如一开始数据存储方式 采用 `SQLite` 数据库，后来把数据库换成 `MongoDB`，也不会对上层数据`ContentProvider`使用代码产生影响
 
-![](imagers/493d67dd.png)
+![image-20221030025201960](imagers/image-20221030025201960.png)
 ## 七、 总结
 
 - 我用一张图总结本文内容
 
-![](imagers/8b44522d.png)
+![image-20221030025207971](imagers/image-20221030025207971.png)

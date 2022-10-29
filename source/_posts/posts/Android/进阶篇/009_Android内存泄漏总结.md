@@ -213,7 +213,7 @@ public class AppManager {
 
 将该内部类设为静态内部类或将该内部类抽取出来封装成一个单例，如果需要使用Context，请按照上面推荐的使用Application 的 Context。当然，Application 的 context 不是万能的，所以也不能随便乱用，对于有些地方则必须使用 Activity 的 Context，对于Application，Service，Activity三者的Context的应用场景如下：
 
-![](imagers/9f95315a.png)
+![](imagers/9f95315a-1667075896401140.png)
 
 **其中：** NO1表示 Application 和 Service 可以启动一个 Activity，不过需要创建一个新的 task 任务队列。而对于 Dialog 而言，只有在 Activity 中才能创建
 
@@ -238,7 +238,7 @@ public class AppManager {
 
 ref1和ref2的区别是，ref2使用了匿名内部类。我们来看看运行时这两个引用的内存：
 
-![](imagers/11ac9cb3.png)
+![](imagers/11ac9cb3-1667077128196142.png)
 
 可以看到，ref1没什么特别的。
 但ref2这个匿名类的实现对象里面多了一个引用：
@@ -336,7 +336,7 @@ public class SampleActivity extends Activity {
 
 Java对引用的分类有 Strong reference, SoftReference, WeakReference, PhatomReference 四种。
 
-![](imagers/d78b9005.png)
+![](imagers/d78b9005-1667077135188144.png)
 
 在Android应用的开发中，为了防止内存溢出，在处理一些占用内存大而且声明周期较长的对象时候，可以尽量应用软引用和弱引用技术。
 
@@ -352,7 +352,7 @@ private Map <String, SoftReference<Bitmap>> imageCache = new HashMap <String, So
 
 再来定义一个方法，保存Bitmap的软引用到HashMap。
 
-![](imagers/7489db9b.png)
+![](imagers/7489db9b-1667077610626164.png)
 
 使用软引用以后，在OutOfMemory异常发生之前，这些缓存的图片资源的内存空间可以被释放掉的，从而避免内存达到上限，避免Crash发生。
 
@@ -422,7 +422,7 @@ Java 内存泄漏的分析工具有很多，但众所周知的要数 MAT(Memory 
 
   打开 DDMS 工具，在左边 Devices 视图页面选中“Update Heap”图标，然后在右边切换到 Heap 视图，点击 Heap 视图中的“Cause GC”按钮，到此为止需检测的进程就可以被监视。
 
-![](imagers/062df5c7.png)
+![](imagers/062df5c7-1667077144260146.png)
 
   Heap视图中部有一个Type叫做data object，即数据对象，也就是我们的程序中大量存在的类类型的对象。在data object一行中有一列是“Total Size”，其值就是当前进程中所有Java数据对象的内存总量，一般情况下，这个值的大小决定了是否会有内存泄漏。可以这样判断：
 
@@ -436,19 +436,19 @@ Java 内存泄漏的分析工具有很多，但众所周知的要数 MAT(Memory 
 
   A)Dump出内存泄露当时的内存镜像hprof，分析怀疑泄露的类：
 
-![](imagers/5305266a.png)
+![](imagers/5305266a-1667077149543148.png)
 
   B)分析持有此类对象引用的外部对象
 
-![](imagers/d97f79af.png)
+![](imagers/d97f79af-1667077152284150.png)
 
   C)分析这些持有引用的对象的GC路径
 
-![](imagers/87fa5e72.png)
+![](imagers/87fa5e72-1667077154495152.png)
 
   D)逐个分析每个对象的GC路径是否正常
 
-![](imagers/0f002144.png)
+![](imagers/0f002144-1667077157334154.png)
 
   从这个路径可以看出是一个antiRadiationUtil工具类对象持有了MainActivity的引用导致MainActivity无法释放。此时就要进入代码分析此时antiRadiationUtil的引用持有是否合理（如果antiRadiationUtil持有了MainActivity的context导致节目退出后MainActivity无法销毁，那一般都属于内存泄露了）。
 
@@ -462,17 +462,17 @@ Java 内存泄漏的分析工具有很多，但众所周知的要数 MAT(Memory 
 
   C）在NavigationHistory view里 (如果看不到就从Window >show view>MAT- Navigation History ), 右击histogram然后选择Add to Compare Basket .
 
-![](imagers/ca833b7b.png)
+![](imagers/ca833b7b-1667077160175156.png)
 
   D）打开第二个HPROF 文件然后重做步骤2和3.
 
   E）切换到Compare Basket view, 然后点击Compare the Results (视图右上角的红色”!”图标)。
 
-![](imagers/e053e9cf.png)
+![](imagers/e053e9cf-1667077162934158.png)
 
   F）分析对比结果
 
-![](imagers/e9ae9d46.png)
+![](imagers/e9ae9d46-1667077165001160.png)
 
   可以看出两个hprof的数据对象对比结果。
 

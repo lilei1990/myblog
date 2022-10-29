@@ -16,11 +16,11 @@ top_img: /imagers/image-20221029000350349.png
 
 ### 2.背景
 
-![](imagers/843bdbeb.png)
+![](imagers/843bdbeb-166707429555456.png)
 
 ### 3.优点
 
-![](imagers/0a1f40b2.png)
+![](imagers/0a1f40b2-166707431244658.png)
 
 ## 二、Android插件化基础
 
@@ -78,7 +78,7 @@ res里的每一个资源都会在R.java里生成一个对应的Integer类型的i
 
 ## 三、Android插件化开源项目
 
-![img](http://upload-images.jianshu.io/upload_images/3985563-d14b0906078e525b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![img](imagers/1240-166707432496862.png)
 
 介绍一下其中比较重要的两个，实现思想不同，也是入门插件化可以学习的两个。
 

@@ -4,13 +4,13 @@ date: "2022-08-01"
 title: C语言基础合集
 tags: "C语言"
 categories: "C语言"
-cover: /imagers/clip_image002.png
-top_img: /imagers/clip_image002.png
+cover: /imagers/image-20221030051915254.png
+top_img: /imagers/image-20221030051915254.png
 ---
 
 
 
- 
+
 
 ### 1.  C语言概述
 
@@ -41,11 +41,11 @@ top_img: /imagers/clip_image002.png
 
 ##### 1.2.1 计算机结构组成
 
-![2016-05-31_154538](imagers/clip_image004.jpg)
+![image-20221030051840233](imagers/image-20221030051840233.png)
 
 ##### 1.2.2 计算机系统组成
 
-![2016-05-31_155246](imagers/clip_image006.jpg)
+![image-20221030052057437](imagers/image-20221030052057437.png)
 
 ##### 1.2.3 程序和指令
 
@@ -55,7 +55,7 @@ top_img: /imagers/clip_image002.png
 
  
 
-![2016-05-31_155734](imagers/clip_image007.png)
+![image-20221030052103513](imagers/image-20221030052103513.png)
 
  
 

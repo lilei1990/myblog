@@ -24,7 +24,7 @@ top_img: /imagers/image-20221028201214599.png
 > Activity退居后台内存不足：   onCreate()—>onStart()—>onResume()，Activity进入运行状态。
 
 
-  ![](imagers/b646144f.png)
+  ![image-20221030024753640](imagers/image-20221030024753640.png)
 
 **Activity启动方式。**
 
@@ -123,4 +123,4 @@ top_img: /imagers/image-20221028201214599.png
 
 **Activity和Fragment的生命周期**
 
-![](imagers/63e90972.png)
+![image-20221030024901662](imagers/image-20221030024901662.png)

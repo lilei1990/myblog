@@ -126,7 +126,7 @@ BoxWithConstraints 是一种类似于Box布局的布局，但它的优点是可�
 
 在 BoxWithConstraints 范围内，您可以访问 BoxWithConstraintsScope。有了它，您可以获得dp中的minWidth、maxWidth、minHeight、maxHeight和像素中的约束。
 
-![img](imagers/boxwithconstraints.png)
+![image-20221030054410019](imagers/image-20221030054410019.png)
 
 ```
 @Composable
@@ -167,7 +167,7 @@ private fun MyBoxWithConstraintsDemo() {
 
 Compose 中的 ConstraintLayout 类似于经典 Android 视图系统中的 ConstraintLayout
 
-![img](imagers/constraintlayout.png)
+![image-20221030054416006](imagers/image-20221030054416006.png)
 
 ```
 @Composable
@@ -260,7 +260,7 @@ fun Scaffold(
 
 Spacer 是一个 Composable，当您想在 Composable 之间添加额外的空间时可以使用它
 
-![img](imagers/spacer.png)
+![image-20221030054423747](imagers/image-20221030054423747.png)
 
 ```
 @Composable
@@ -474,7 +474,7 @@ Jetpack Compose 提供了一个用于显示网格或网格元素的 API。
 
 要在网格中排列列表项，请`LazyVerticalGrid`提供一个单元格参数，该参数控制单元格如何组成列。以下示例显示网格中的项目，`GridCells.Adaptive`用于将每列的宽度设置为至少 128.dp：
 
-![img](imagers/lazyverticalgrid.png)
+![image-20221030054435505](imagers/image-20221030054435505.png)
 
 ```
 @Composable
@@ -531,7 +531,7 @@ Shape 可用于绘制特定形状的 Composable。
 
 ### 矩形
 
-![img](imagers/rectangleshape.png)
+![image-20221030054449664](imagers/image-20221030054449664.png)
 
 描述矩形的形状。
 
@@ -553,7 +553,7 @@ fun ExampleBox(shape: Shape){
 
 ### 圆形
 
-![img](imagers/circleshape.png)
+![image-20221030054453510](imagers/image-20221030054453510.png)
 
 所有角的大小为形状大小的 50% 的圆形形状。
 
@@ -575,7 +575,7 @@ fun ExampleBox(shape: Shape){
 
 ### 圆角
 
-![img](imagers/roundedcornershape.png)
+![image-20221030054458030](imagers/image-20221030054458030.png)
 
 描述圆角矩形的形状。
 
@@ -599,7 +599,7 @@ fun ExampleBox(shape: Shape){
 
 ### 切角
 
-![img](imagers/cutcornershape.png)
+![image-20221030054502011](imagers/image-20221030054502011.png)
 
 描述带有切角的矩形的形状。
 
@@ -757,7 +757,7 @@ ClickableText(
 ### 输入框
 Compose提供了两种Material风格的输入框，分别是带背景的输入框和带边框的输入框。
 * 带背景输入框
-![image.png](imagers/e4f992b055334e7bac21bb83ae3adffdtplv-k3u1fbpfcp-watermark.png)
+![image-20221030054510791](imagers/image-20221030054510791.png)
 
 参数说明
 ```kotlin
@@ -805,7 +805,7 @@ fun TextField(
 )
 ```
 * 带边框输入框
-![image.png](imagers/f2c41ba3e872423baa4887e18372e666tplv-k3u1fbpfcp-watermark.png)
+![image-20221030054517756](imagers/image-20221030054517756.png)
 
 参数说明
 ```kotlin
@@ -852,7 +852,7 @@ fun OutlinedTextField(
 ) 
 ```
 * 基础输入框
-  ![img](imagers/bfa5c23f8dc6499280bc033ed5c80c6atplv-k3u1fbpfcp-watermark.png)
+  ![image-20221030054524678](imagers/image-20221030054524678.png)
 
 除了Material风格的输入框，Compose还提供了一个基础的输入框：BasicTextField，参数说明
 ```kotlin
@@ -1308,7 +1308,7 @@ fun drawImage(
 ### 混合方式
 Compose提供了类似于Xfermode的混合方式，具体可以查看BlendMode类，Xfermode对照图
 
-![image.png](imagers/cc71bb463c4944baa1b5bc87ab719289tplv-k3u1fbpfcp-watermark.png)
+![image-20221030055423239](imagers/image-20221030055423239.png)
 
 ## 自定义布局
 
@@ -1356,7 +1356,7 @@ Text(
 )
 ```
 结果大概就是这样</br>
-![img](imagers/6bd8a9fb728c40c6ba60c5977fd48abftplv-k3u1fbpfcp-watermark.png)  ![img](
+![image-20221030055431945](imagers/image-20221030055431945.png)  
 
 ### 自定义布局
 自定义约束符只能作用于自身，如果需要约束子组件，则需要使用自定义布局的方式。</br>

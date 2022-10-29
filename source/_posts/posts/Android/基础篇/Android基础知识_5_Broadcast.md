@@ -40,7 +40,7 @@ top_img: /imagers/image-20221028201214599.png
   2. 消息发布者（广播发布者）
   3. 消息中心（`AMS`，即`Activity Manager Service`）
 
-![](imagers/0b720f30.png)
+![image-20221030025217831](imagers/image-20221030025217831.png)
 - 原理描述：
 
   1. 广播接收者 通过 `Binder`机制在 `AMS` 注册
@@ -61,7 +61,7 @@ top_img: /imagers/image-20221028201214599.png
 
 具体使用流程如下：
 
-![](imagers/165557e3.png)
+![image-20221030025223511](imagers/image-20221030025223511.png)
 接下来我将一步步介绍如何使用
 
 > 即上图中的 **开发者手动完成部分**
@@ -184,7 +184,7 @@ protected void onPause() {
 
 #### 4.2.3 两种注册方式的区别
 
-![](imagers/a038e38e.png)
+![image-20221030025234915](imagers/image-20221030025234915.png)
 ### 4.3 广播发送者向AMS发送广播
 
 #### 4.3.1 广播的发送

@@ -19,7 +19,7 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按运行地点分类：**  
 
 
-![](imagers/72fde014.png)
+![image-20221030024916712](imagers/image-20221030024916712.png)
 
 
 
@@ -27,7 +27,7 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按运行类型分类：**  
 
 
-![](imagers/a43ab502.png)
+![image-20221030024924560](imagers/image-20221030024924560.png)
 
 
 
@@ -35,13 +35,13 @@ Service是Android中实现程序后台运行的解决方案，它非常适用于
 **按使用方式分类：**  
 
 
-![](imagers/360eb885.png)
+![image-20221030024930876](imagers/image-20221030024930876.png)
 
 
 
 ### 三、Service生命周期
 
-![](imagers/ea2f8a36.png)
+![image-20221030024941746](imagers/image-20221030024941746.png)
 
 
 
@@ -437,12 +437,12 @@ mBuilder.setContentIntent(pendingIntent);
 
 
 ​                
-        //对应的manifes代码，需要添加action：
-       <service
-                  android:name="com.example.testservices.TestService"
-                  android:enabled="true"
-                  android:exported="true">
-       
+​        //对应的manifes代码，需要添加action：
+​       <service
+​                  android:name="com.example.testservices.TestService"
+​                  android:enabled="true"
+​                  android:exported="true">
+​       
                   <intent-filter>
                       <action android:name="xixixi.buder" />
                   </intent-filter>
