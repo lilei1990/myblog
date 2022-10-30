@@ -8,8 +8,8 @@ aside: false
 top_img: https://fastly.jsdelivr.net/gh/jerryc127/CDN/Photo/photo.jpg
 ---
 
-{% galleryGroup '壁紙' '收藏的一些壁紙' '/Gallery/wallpaper' https://i.loli.net/2019/11/10/T7Mu8Aod3egmC4Q.png %}
+{% galleryGroup '北京' '国庆北京' '/Gallery/北京' /Gallery/北京/长城2.jpg %}
 
-{% galleryGroup '漫威' '關於漫威的圖片' '/Gallery/marvel' https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg %}
+{% galleryGroup '婺源' '婺源-徽州韵味,梯田,油菜花' '/Gallery/婺源' /Gallery/婺源/PANO_20140407_084333.jpg %}
 
-{% galleryGroup 'OH MY GIRL' '關於OH MY GIRL的圖片' '/Gallery/ohmygirl' https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg %}
+{% galleryGroup '川藏线' '2016年川藏线骑行' '/Gallery/川藏线' /Gallery/川藏线/IMG_20160312_115128.jpg %}
